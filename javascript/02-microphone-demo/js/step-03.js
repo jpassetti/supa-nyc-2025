@@ -5,7 +5,7 @@ let tx = 0; // Time variable for x noise
 let ty = 1000; // Offset for y noise (so x and y are independent)
 
 function setup() {
- createCanvas(800, 400); // Create a 800x400 pixel canvas
+ createCanvas(800, 400); // Create a canvas 800x400 pixels
  background(220); // Light gray background
  noStroke(); // No outline on circles
 }
