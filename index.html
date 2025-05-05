@@ -98,6 +98,54 @@
     </li>
    </ol>
 
+   <div class="bg-blue-50 border border-blue-200 rounded p-4 mb-8">
+  <h3 class="text-lg font-bold text-blue-800 mb-2">
+    How to Set Up a Local p5.js Environment in VS Code
+  </h3>
+  <ol class="list-decimal ml-6 text-base text-gray-800">
+    <li>
+      <b>Open VS Code</b> and create a new folder for your project (e.g., <code>my-p5-sketch</code>).
+    </li>
+    <li>
+      Inside your project folder, create a new file named <code>index.html</code>.
+    </li>
+    <li>
+      Download the latest <b>p5.js</b> library from the
+      <a
+        href="https://p5js.org/download/"
+        class="underline text-blue-700"
+        target="_blank"
+        >p5.js Download page</a
+      >. Save <code>p5.js</code> (or <code>p5.min.js</code>) into your project folder.
+    </li>
+    <li>
+      In your <code>index.html</code>, add a <code>&lt;script&gt;</code> tag that links to your local <code>p5.js</code> file:<br />
+      <code>&lt;script src="p5.js"&gt;&lt;/script&gt;</code>
+    </li>
+    <li>
+      Create a new file named <code>sketch.js</code> in the same folder. Write your p5.js code there.
+    </li>
+    <li>
+      In <code>index.html</code>, add another <code>&lt;script src="sketch.js"&gt;&lt;/script&gt;</code> tag <b>after</b> the p5.js script tag.
+    </li>
+    <li>
+      Open <code>index.html</code> in your browser to run your sketch. You can use the "Go Live" extension in VS Code for easy local preview.
+    </li>
+    <li>
+      For more help, see the
+      <a
+        href="https://p5js.org/get-started/"
+        class="underline text-blue-700"
+        target="_blank"
+        >p5.js Get Started Guide</a
+      >.
+    </li>
+  </ol>
+  <p class="mt-2 text-sm text-gray-600">
+    Tip: You can also use the online <a href="https://editor.p5js.org/" class="underline text-blue-700" target="_blank">p5.js Web Editor</a> for quick experiments.
+  </p>
+</div>
+
    <h2 class="text-2xl font-bold mt-12 mb-4 text-green-800">
     Python Demos (Processing.py)
    </h2>
