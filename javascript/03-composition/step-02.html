@@ -1,0 +1,57 @@
+<!-- Step 2: Color Triad Grid Remix -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Step 2: Color Triad Grid Remix</title>
+  <script src="../p5.js"></script>
+  <script src="js/step-02.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-8">
+  <div class="max-w-2xl w-full">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">Step 2: Color Triad Grid Remix</h1>
+    <p class="mb-4 text-lg">
+      <b>Remix the grid!</b><br>
+      <b>Step 2</b> creates a playful, abstract grid using a <b>color triad</b> (three colors spaced evenly on the color wheel) and layering. Each cell is filled with either a colored or white square, and may have a half-circle (with a different color) on top, randomly rotated.<br>
+      <br>
+      <b>How it works (JavaScript logic):</b>
+      <ul class="list-disc ml-8">
+        <li>The grid is 12x12. Each cell is drawn from the center out, so shapes fill the space with no gaps.</li>
+        <li><b>Background:</b> Each cell randomly gets a colored square (from the triad) or a white square (blank).</li>
+        <li><b>Top shape:</b> Each cell randomly gets either a half-circle (with a different triad color, never matching the background if colored) or nothing (blank).</li>
+        <li>The half-circle is randomly rotated 90°, 180°, or 270° for variety.</li>
+        <li>All shapes are drawn with <code>noStroke()</code> for a clean look.</li>
+      </ul>
+      <br>
+      <b>What is a color triad?</b><br>
+      A color triad is a set of three colors spaced evenly around the color wheel. This creates strong visual contrast and harmony.<br>
+      <br>
+      <b>Classroom/Teacher Notes:</b>
+      <ul class="list-disc ml-8">
+        <li>Discuss how layering and negative space affect the composition.</li>
+        <li>Challenge students to remix: change the triad, grid size, or add new shapes.</li>
+        <li>Ask: What happens if you use analogous or complementary colors instead?</li>
+        <li>Try making all backgrounds white, or all backgrounds colored, for different effects.</li>
+        <li>Encourage students to explain the random logic in their own words.</li>
+      </ul>
+      <br>
+      <b>Code summary:</b>
+      <ul class="list-disc ml-8">
+        <li>Each cell: <code>rect()</code> for background, <code>arc()</code> for half-circle (if chosen).</li>
+        <li>Random choices ensure every grid is unique on each run.</li>
+        <li>Half-circles never match the colored background for maximum contrast.</li>
+      </ul>
+    </p>
+    <nav class="flex gap-4 justify-center mt-6">
+      <a href="index.html" class="text-blue-700 hover:underline font-semibold">&uarr; Composition Demo TOC</a>
+      <span>|</span>
+      <a href="../index.html" class="text-blue-600 hover:underline font-semibold">JavaScript Demos TOC</a>
+      <span>|</span>
+      <a href="step-01.html" class="text-blue-600 hover:underline">&larr; Previous</a>
+      <span>|</span>
+      <a href="step-03.html" class="text-blue-600 hover:underline">Next &rarr;</a>
+    </nav>
+  </div>
+</body>
+</html>

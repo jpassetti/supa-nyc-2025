@@ -1,0 +1,60 @@
+<!-- Step 3: Weather Data Grid Visualization -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Step 3: Weather Data Grid Visualization</title>
+  <script src="../p5.js"></script>
+  <script src="js/step-03.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-8">
+  <div class="max-w-2xl w-full">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">Step 3: Weather Data Grid Visualization</h1>
+    <p class="mb-4 text-lg">
+      <b>Visualize a year of real weather data!</b><br>
+      This step fetches the last 365 days of daily high temperatures for Syracuse, NY from the free <a href="https://open-meteo.com/" class="underline text-blue-700" target="_blank">Open-Meteo API</a>.<br>
+      Each day is shown as a circle in a grid. Small blue circles = cold days, large red/orange circles = hot days. The color spectrum blends smoothly from blue (cold) to red (hot), like a weather map.<br>
+      <br>
+      <b>How it works (for beginners):</b>
+      <ul class="list-disc ml-8">
+        <li>The code uses JavaScript and the p5.js library to draw on a canvas.</li>
+        <li>It uses the <b>fetch()</b> function to get real weather data from the Open-Meteo API (no login or key needed).</li>
+        <li>The API returns a list of 365 daily high temperatures for Syracuse, NY, in Fahrenheit.</li>
+        <li>The code arranges these 365 days in a grid (20 columns x 19 rows) so every day fits on the canvas.</li>
+        <li>Each circle's <b>size</b> and <b>color</b> are mapped to the temperature for that day: colder = smaller and blue, hotter = larger and red/orange.</li>
+        <li>The color smoothly transitions through blue, cyan, green, yellow, orange, and red, just like a weather map.</li>
+        <li>If the data is still loading, you'll see a loading message. If the API fails, you'll see an error message.</li>
+      </ul>
+      <br>
+      <b>What is an API?</b><br>
+      An API (Application Programming Interface) lets you get data from another website or service. Here, we use the Open-Meteo API to get real weather data for free.<br>
+      <br>
+      <b>Classroom/Teacher Notes:</b>
+      <ul class="list-disc ml-8">
+        <li>Discuss how data can be mapped to visual properties (size, color, position).</li>
+        <li>Challenge students to use other weather data (rainfall, low temps, etc) or try a different city by changing the latitude/longitude in the code.</li>
+        <li>Ask: How does the color mapping affect your perception of the data? What other color palettes could you use?</li>
+        <li>Try changing the grid size, color stops, or mapping for new effects.</li>
+        <li>Encourage students to explain the code logic in their own words, especially how the API data is used.</li>
+      </ul>
+      <br>
+      <b>Remix ideas:</b>
+      <ul class="list-disc ml-8">
+        <li>Change the city by editing the latitude/longitude in the code.</li>
+        <li>Visualize a different weather variable (like rainfall or low temperature).</li>
+        <li>Try a different color palette or shape for the data points.</li>
+        <li>Animate the data over time, or add tooltips for each day.</li>
+      </ul>
+    </p>
+    <nav class="flex gap-4 justify-center mt-6">
+      <a href="index.html" class="text-blue-700 hover:underline font-semibold">&uarr; Composition Demo TOC</a>
+      <span>|</span>
+      <a href="../index.html" class="text-blue-600 hover:underline font-semibold">JavaScript Demos TOC</a>
+      <span>|</span>
+      <a href="step-02.html" class="text-blue-600 hover:underline">&larr; Previous</a>
+    </nav>
+  </div>
+</body>
+</html>

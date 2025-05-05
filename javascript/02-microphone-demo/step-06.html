@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Step 6: Microphone Recording to Circles</title>
+  <script src="../p5.js"></script>
+<script src="js/step-06.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-8">
+  <div class="max-w-xl w-full">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">Step 6: Microphone Recording to Circles</h1>
+    <p class="mb-4 text-lg">
+      <b>Teacher Instructions:</b><br>
+      This step records 4 seconds of sound, then draws a row of circles to create a "sound landscape."<br>
+      Each circle represents a moment in the recording. Its height, size, and color are all based on how loud the sound was at that moment.<br>
+      <br>
+      <b>How does the code measure sound?</b><br>
+      - The microphone gives us a stream of numbers from 0 to 255 for each audio sample.<br>
+      - <b>128</b> is the center (no sound). Numbers less than 128 are the negative part of the sound wave; numbers greater than 128 are the positive part.<br>
+      - Each frame (about 60 times per second), the code collects 128 samples from the mic.<br>
+      - Each sample is converted to a value between -1 (lowest) and 1 (highest) using: <code>v = (sample - 128) / 128</code>.<br>
+      - The code takes the <b>absolute value</b> of each sample (so both positive and negative swings count as "loud") and adds them up.<br>
+      - The sum is divided by 128 (the number of samples) to get the <b>average amplitude</b> for that frame.<br>
+      - This average is a number between 0 (quiet) and 1 (loud).<br>
+      <br>
+      <b>Example calculation:</b><br>
+      <code>
+        If sample = 128 (center, silence), then v = 0<br>
+        If sample = 255 (max positive), then v ≈ 0.99<br>
+        If sample = 0 (max negative), then v = -1<br>
+        If sum of all |v| = 32 and there are 128 samples, then average amplitude = 32 / 128 = 0.25
+      </code><br>
+      <br>
+      <b>How many measurements?</b><br>
+      - The code collects about 60 amplitude measurements per second (one per animation frame).<br>
+      - For a 4-second recording, you get about 240 circles in the final visualization.<br>
+      <br>
+      <b>How does the visualization work?</b><br>
+      - <b>Vertical position:</b> Quiet sounds are near the bottom, loud sounds are near the top.<br>
+      - <b>Size:</b> Quiet = small circles, loud = big circles.<br>
+      - <b>Color:</b> Quiet = blue, loud = magenta. The color is smoothly blended using <code>lerpColor()</code>.<br>
+      - <b>lerp</b> means "linear interpolation"—it blends smoothly between two values.<br>
+      <br>
+      <b>Classroom Tips:</b><br>
+      - Try different types of sounds (claps, talking, music) and see how the circles change.<br>
+      - Discuss how sound can be visualized and mapped to shapes and color.<br>
+      - Challenge students to change the color mapping or the way circles are drawn.<br>
+      <br>
+      <b>Note:</b> Microphone access requires user permission and may not work on all browsers or devices. Chrome is recommended.
+    </p>
+    <nav class="flex gap-4 justify-center mt-6">
+      <a href="index.html" class="text-blue-700 hover:underline font-semibold">&uarr; Microphone Demo TOC</a>
+      <span>|</span>
+      <a href="../index.html" class="text-blue-600 hover:underline font-semibold">JavaScript Demos TOC</a>
+      <span>|</span>
+      <a href="step-05.html" class="text-blue-600 hover:underline">&larr; Previous</a>
+    </nav>
+  </div>
+</body>
+</html>

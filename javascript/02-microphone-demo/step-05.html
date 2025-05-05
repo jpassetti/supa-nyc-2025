@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Step 5: Microphone Color Lerp</title>
+  <script src="../p5.js"></script>
+  <script src="js/step-05.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-8">
+  <div class="max-w-xl w-full">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">Step 5: Microphone Color Lerp</h1>
+    <p class="mb-4 text-lg">
+      <b>Teacher Notes:</b><br>
+      This step uses the microphone to control both the size and color of a circle.<br>
+      The louder the sound, the bigger the circle gets, and the color shifts from blue (quiet) to magenta (loud).<br>
+      <br>
+      <b>How the Sound Data is Used:</b><br>
+      - The computer listens to the microphone and measures the "amplitude" (loudness) of the sound in real time.<br>
+      - The code averages the absolute value of the audio waveform to get a number between 0 (quiet) and about 0.5 (very loud).<br>
+      - This amplitude value is used in two ways:<br>
+        1. <b>Size:</b> The louder the sound, the larger the circle. (Amplitude is mapped to a diameter from 80 to 700 pixels.)<br>
+        2. <b>Color:</b> The amplitude is also used to blend between two colors: blue for quiet, magenta for loud.<br>
+      - The blending is done with a function called <code>lerpColor()</code>.<br>
+      <br>
+      <b>What does "Lerp" mean?</b><br>
+      - "Lerp" stands for <b>Linear Interpolation</b>.<br>
+      - It means to smoothly mix between two values. In this case, it mixes between the blue color and the magenta color.<br>
+      - When the sound is quiet, the circle is all blue. As the sound gets louder, the color gradually shifts toward magenta.<br>
+      - This is a common technique in animation and creative coding to create smooth transitions.<br>
+      <br>
+      <b>How to Use:</b><br>
+      1. Open this page in Chrome (localhost or HTTPS required for mic access).<br>
+      2. Click anywhere on the canvas to enable the microphone.<br>
+      3. Make noise, talk, or clap—watch the circle change size and color!<br>
+      4. Reload the page to reset.<br>
+      <br>
+      <b>Classroom Tips:</b><br>
+      - Ask students to observe how the color and size change with volume.<br>
+      - Try mapping the mic input to other properties (e.g., position, shape).<br>
+      - Discuss how "lerp" can be used for smooth transitions in other creative projects.<br>
+      <br>
+      <b>Note:</b> Microphone access requires user permission and may not work on all browsers or devices. Chrome is recommended.
+    </p>
+    <nav class="flex gap-4 justify-center mt-6">
+      <a href="index.html" class="text-blue-700 hover:underline font-semibold">&uarr; Microphone Demo TOC</a>
+      <span>|</span>
+      <a href="../index.html" class="text-blue-600 hover:underline font-semibold">JavaScript Demos TOC</a>
+      <span>|</span>
+      <a href="step-04.html" class="text-blue-600 hover:underline">&larr; Previous</a>
+      <span>|</span>
+      <a href="step-06.html" class="text-blue-600 hover:underline">Next &rarr;</a>
+    </nav>
+  </div>
+</body>
+</html>

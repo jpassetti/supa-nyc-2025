@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Step 4: 2D Perlin Noise Island Map</title>
+  <script src="../p5.js"></script>
+  <script src="js/step-04.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-8">
+  <div class="max-w-xl w-full">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">Step 4: 2D Perlin Noise Island Map</h1>
+    <p class="mb-4 text-lg">
+      <b>Explore Perlin noise in two dimensions!</b><br>
+      This step creates a 100x100 grid of blocks on a 1000x1000px canvas. Each block uses Perlin noise to decide if it's ocean, sand, land, or mountain.<br>
+      <br>
+      <b>How it works:</b>
+      <ul class="list-disc ml-8">
+        <li>The canvas is filled with ocean blue by default.</li>
+        <li>For each block, we use Perlin noise to get a value between 0 and 1.</li>
+        <li>If the value is <b>0.4 or less</b>, it's ocean (left as background).</li>
+        <li>If the value is <b>above 0.4 up to 0.6</b>, we draw a sand block (beach).</li>
+        <li>If the value is <b>above 0.6 up to 0.8</b>, we draw a land block (dirt color).</li>
+        <li>If the value is <b>above 0.8</b>, we draw a mountain block (gray).</li>
+      </ul>
+      <br>
+      <b>What is 2D Perlin noise?</b><br>
+      <span class="block mb-2">Perlin noise is a type of smooth, natural-looking randomness often used in computer graphics and games. <b>2D Perlin noise</b> means you provide two coordinates (x, y) and get a value between 0 and 1. Nearby points have similar values, so you get smooth "islands" and "continents" instead of random speckles. This is why it's great for making terrain, clouds, and textures that look organic!<br>
+      <a href="https://p5js.org/reference/p5/noise/" target="_blank" class="underline text-blue-700">Learn more: p5.js noise() reference</a></span>
+      <ul class="list-disc ml-8">
+        <li>Each block in the grid uses its (x, y) position as input to the noise function: <code>noise(x, y)</code>.</li>
+        <li>Blocks that are close together have similar noise values, so you get smooth transitions between ocean, sand, land, and mountain.</li>
+        <li>Changing the scale of the input (multiplying x and y by a small number) controls how "zoomed in" or "zoomed out" the terrain looks.</li>
+      </ul>
+      <br>
+      <b>Classroom/Teacher Notes:</b>
+      <ul class="list-disc ml-8">
+        <li>Discuss how 2D Perlin noise can be used for procedural map generation.</li>
+        <li>Ocean blocks are now n ≤ 0.4, sand is 0.4 &lt; n ≤ 0.6, land is 0.6 &lt; n ≤ 0.8, and mountain is n &gt; 0.8.</li>
+        <li>Challenge students to change the thresholds or colors for different effects.</li>
+        <li>Try animating the noise by changing the noise seed or offset over time.</li>
+      </ul>
+    </p>
+    <nav class="flex gap-4 justify-center mt-6">
+      <a href="index.html" class="text-blue-700 hover:underline font-semibold">&uarr; Microphone Demo TOC</a>
+      <span>|</span>
+      <a href="../index.html" class="text-blue-600 hover:underline font-semibold">JavaScript Demos TOC</a>
+      <span>|</span>
+      <a href="step-03.html" class="text-blue-600 hover:underline">&larr; Previous</a>
+      <span>|</span>
+      <a href="step-05.html" class="text-blue-600 hover:underline">Next &rarr;</a>
+    </nav>
+  </div>
+</body>
+</html>

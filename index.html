@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creative Coding Demos: Table of Contents</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-8">
+  <div class="max-w-2xl w-full">
+    <h1 class="text-4xl font-bold mb-6 text-blue-700">Creative Coding Demos</h1>
+    <h2 class="text-2xl font-bold mt-8 mb-4 text-blue-800">JavaScript Demos (p5.js)</h2>
+    <ol class="list-decimal list-inside text-left mx-auto mb-8">
+      <li>
+        <a href="javascript/01-circles-demo/index.html" class="text-blue-600 hover:underline text-xl font-semibold">Demo 1: Circle Grid with Randomness</a>
+        <div class="ml-6 text-gray-700 text-base">
+          - Draw a grid of circles using loops<br>
+          - Add randomness to size and color<br>
+          - Animate and save generative art
+        </div>
+      </li>
+      <li class="mt-4">
+        <a href="javascript/02-microphone-demo/index.html" class="text-blue-600 hover:underline text-xl font-semibold">Demo 2: Circles with Perlin Noise or Mic Input</a>
+        <div class="ml-6 text-gray-700 text-base">
+          - Compare random() and noise() visually<br>
+          - Animate with Perlin noise (1D & 2D)<br>
+          - Use microphone input for real-time generative art
+        </div>
+      </li>
+      <li class="mt-4">
+        <a href="javascript/03-composition/index.html" class="text-blue-600 hover:underline text-xl font-semibold">Demo 3: Abstract Compositions with Shapes</a>
+        <div class="ml-6 text-gray-700 text-base">
+          - Build a grid of tiles with random shapes<br>
+          - Explore constraints, composition, and abstraction
+        </div>
+      </li>
+    </ol>
+
+    <h2 class="text-2xl font-bold mt-12 mb-4 text-green-800">Python Demos (Processing.py)</h2>
+    <ol class="list-decimal list-inside text-left mx-auto mb-8">
+      <li>
+        <a href="python/01-circles-demo/index.html" class="text-green-700 font-semibold underline">Demo 1: Circle Grid with Randomness (Processing.py)</a>
+        <div class="ml-6 text-gray-700 text-base">
+          - Draw a grid of circles using loops (Python version)<br>
+          - Add randomness to size and color<br>
+          - Animate and save generative art<br>
+          - <b>Instructions:</b> See below for how to set up Processing.py and run these sketches.<br>
+          - <b>Files:</b> <code>repo/python/01-circles-demo/py/step-01.py</code>, <code>py/step-02.py</code> & <code>step-01.html</code>, <code>step-02.html</code>
+        </div>
+      </li>
+       <li class="mt-4">
+      <a href="python/02-microphone-demo/index.html" class="text-green-700 font-semibold underline">Demo 2: Circles with Perlin Noise or Mic Input (Processing.py)</a>
+      <div class="ml-6 text-gray-700 text-base">
+        - Compare random() and noise() visually (Python version)<br>
+        - Animate with Perlin noise (1D & 2D)<br>
+        - Simulate or discuss microphone input for generative art<br>
+        - <b>Instructions:</b> See below for how to set up Processing.py and run these sketches.<br>
+        - <b>Files:</b> <code>repo/python/02-microphone-demo/py/step-01.py</code>, <code>py/step-02.py</code>, ... & <code>step-01.html</code>, <code>step-02.html</code>, ...
+      </div>
+    </li>
+    <li class="mt-4">
+      <a href="python/03-composition/index.html" class="text-green-700 font-semibold underline">Demo 3: Abstract Compositions with Shapes (Processing.py)</a>
+      <div class="ml-6 text-gray-700 text-base">
+        - Build a grid of tiles with random shapes and color (Python version)<br>
+        - Explore constraints, composition, and abstraction<br>
+        - <b>Instructions:</b> See below for how to set up Processing.py and run these sketches.<br>
+        - <b>Files:</b> <code>repo/python/03-composition/py/step-01.py</code>, <code>py/step-02.py</code>, <code>py/step-03.py</code> & <code>step-01.html</code>, <code>step-02.html</code>, <code>step-03.html</code>
+      </div>
+    </li>
+      <!-- Add more Python/Processing.py demos here as you translate them! -->
+    </ol>
+
+   
+
+    <div class="bg-green-50 border border-green-200 rounded p-4 mb-8">
+      <h3 class="text-lg font-bold text-green-800 mb-2">How to Set Up Processing.py (Python Mode)</h3>
+      <ol class="list-decimal ml-6 text-base text-gray-800">
+        <li>Download and install <a href="https://processing.org/download" class="underline text-green-700" target="_blank">Processing</a> (the Java-based IDE) for your OS.</li>
+        <li>Open Processing, then go to <b>Tools &rarr; Manage Tools...</b>, click on the Modes tab and look for <b>Python Mode for Processing 4</b>. Click "Install".</li>
+        <li>Switch to Python Mode using the dropdown in the top-right corner of the Processing window.</li>
+        <li>Create a new sketch and paste in the Processing.py code.</li>
+        <li>Click the "Run" button (triangle) to run your Python sketch!</li>
+        <li>For more help, see the <a href="https://py.processing.org/tutorials/getting-started/" class="underline text-green-700" target="_blank">Processing.py Getting Started Guide</a>.</li>
+      </ol>
+      <p class="mt-2 text-sm text-gray-600">Note: Processing.py is not the same as p5py or p5.js. It runs in the Processing IDE and uses Python syntax to control the Processing graphics engine.</p>
+    </div>
+    <p class="text-left text-gray-500 mt-8">For teachers: Each demo folder contains step-by-step HTML pages with teacher notes and code comments for classroom use.</p>
+  </div>
+</body>
+</html>

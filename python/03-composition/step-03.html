@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Step 3: Layered Abstract Composition (Processing.py)</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-8">
+  <div class="max-w-2xl w-full">
+    <h1 class="text-3xl font-bold mb-4 text-green-700">Step 3: Weather Data Grid Visualization (Processing.py)</h1>
+    <p class="mb-4 text-lg">
+      <b>Visualize a year of real weather data!</b><br>
+      This step uses a CSV file of daily high temperatures for Syracuse, NY (or your city) instead of live API data.<br>
+      Each day is shown as a circle in a grid. Small blue circles = cold days, large red/orange circles = hot days. The color spectrum blends smoothly from blue (cold) to red (hot), like a weather map.<br>
+      <br>
+      <b>How it works (for beginners):</b>
+      <ul class="list-disc ml-8">
+        <li>The code uses Python in Processing.py to draw on a canvas.</li>
+        <li>It loads a CSV file of 365 daily high temperatures (Fahrenheit) from the sketch folder.</li>
+        <li>The code arranges these 365 days in a grid (20 columns x 19 rows) so every day fits on the canvas.</li>
+        <li>Each circle's <b>size</b> and <b>color</b> are mapped to the temperature for that day: colder = smaller and blue, hotter = larger and red/orange.</li>
+        <li>The color smoothly transitions through blue, cyan, green, yellow, orange, and red, just like a weather map.</li>
+        <li>If the data file is missing, you'll see an error message.</li>
+      </ul>
+      <br>
+      <b>How to use:</b>
+      <ul class="list-disc ml-8">
+        <li>Download a CSV file of daily high temperatures (see teacher notes for sources).</li>
+        <li>Place the CSV file in your sketch folder and update the filename in the code if needed.</li>
+        <li>Open <code>py/step-03.py</code> in Processing IDE (Python mode) and run it.</li>
+      </ul>
+      <br>
+      <b>Teacher Notes:</b>
+      <ul class="list-disc ml-8">
+        <li>Use <a href="https://www.ncdc.noaa.gov/cdo-web/" class="underline text-green-700" target="_blank">NOAA</a> or <a href="https://www.visualcrossing.com/weather-data" class="underline text-green-700" target="_blank">Visual Crossing</a> to download weather data as CSV.</li>
+        <li>Discuss how data can be mapped to visual properties (size, color, position).</li>
+        <li>Challenge students to use other weather data (rainfall, low temps, etc) or try a different city by changing the data file.</li>
+        <li>Ask: How does the color mapping affect your perception of the data? What other color palettes could you use?</li>
+        <li>Try changing the grid size, color stops, or mapping for new effects.</li>
+        <li>Encourage students to explain the code logic in their own words, especially how the data is used.</li>
+      </ul>
+      <br>
+      <b>Remix ideas:</b>
+      <ul class="list-disc ml-8">
+        <li>Change the city by using a different CSV file.</li>
+        <li>Visualize a different weather variable (like rainfall or low temperature).</li>
+        <li>Try a different color palette or shape for the data points.</li>
+        <li>Animate the data over time, or add tooltips for each day.</li>
+      </ul>
+    </p>
+    <nav class="flex gap-4 justify-center mt-6">
+      <a href="index.html" class="text-green-700 hover:underline font-semibold">&uarr; Composition Demo TOC</a>
+      <span>|</span>
+      <a href="../../index.html" class="text-green-700 hover:underline">Python Demos TOC</a>
+      <span>|</span>
+      <a href="step-02.html" class="text-green-700 hover:underline">&larr; Previous</a>
+    </nav>
+  </div>
+</body>
+</html>
